@@ -1,0 +1,60 @@
+create table student(sid int,sname varchar(50),sclass varchar(30));
+
+insert into student values(101,'siri','firstclass'),(102,'ram','firstclass'),
+(103,'sam','firstclass');
+
+select * from student;
+select distinct sname from student;
+SELECT COUNT(DISTINCT sname) FROM student;
+select * from student where sname="siri";
+select * from student where sid=101;
+SELECT * FROM student
+WHERE sid > 101;
+SELECT * FROM student
+ORDER BY sname;
+SELECT * FROM student
+ORDER BY sname desc;
+SELECT * FROM student
+ORDER BY sname,sclass;
+select * from student where sname="riya" and sclass="secondclass";
+
+select * from student where sname="riya" or sclass="firstclass";
+
+select * from student where sname like'%a';
+
+select * from student where sname like'r%';
+
+select * from student where sid between 101 and 104;
+
+select * from student where sid not between 101 and 102;
+select * from student where not sid>150;
+select * from student where  sid<150;
+insert into student values(105,'seem','secondclass');
+insert into student(sid,sname) values(106,'kiara');
+select * from student where sclass is null;
+select * from student where sclass is not null;
+update student set sclass='firstclass' where sname='sam';
+update student set sclass='firstclass',sid=104 where sname='riya';
+
+delete from student where sname='seem';
+
+select * from student;
+select * from student limit 3;
+select min(sid) from student;
+select min(sid) from student where sname='sam';
+select max(sid) from student;
+select max(sid) from student where sname='riya;
+select avg(sid) from student;
+select sum(sid) from student;
+select count(sid) from student;
+select * from student where sclass like'_irstclass';
+select * from student where sname like 'r__a';
+select * from student where sname like '[a-z]%';
+select * from student where sname in('riya','seem');
+select * from student where sclass in('firstclass','secondclass');
+select sname as sn from student;
+
+
+
+
+insert into student(sid,sname,sclass) values(104,'riya','secondclass');
