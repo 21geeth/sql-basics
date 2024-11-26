@@ -58,3 +58,22 @@ select sname as sn from student;
 
 
 insert into student(sid,sname,sclass) values(104,'riya','secondclass');
+
+FROM Customers as cs ,Customers as cs2;
+
+select orders.order_id,orders.item,customers.customer_id from orders inner join customers on orders.customer_id=customers.customer_id;
+
+select * from customers right join orders on orders.customer_id=customers.customer_id;
+select * from customers left join orders on orders.customer_id=customers.customer_id;
+select * from customers where Country='USA'  group by first_name having last_name="Doe";
+ALTER TABLE Customers
+ADD Email varchar(255);
+select * from customers;ALTER TABLE customers
+RENAME email to customeremail;
+create index idx_name on
+Customers(first_name,last_name);*/
+---select * from Customers;
+---create table s1(sid int identity(1,10),sname varchar(30));
+select * from s1;
+insert into s1 values(1,'riya'),(2,'rashi'),(3,'pooj');
+
